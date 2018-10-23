@@ -1,11 +1,12 @@
 import React from 'react';
-
+import NewsSlider from '../Widget/NewsSlider/slider'
 const Home = () => {
     return (
         <div>
-            HOme
+            <NewsSlider/>
         </div>
     );
 };
 
 export default Home;
+//7th
