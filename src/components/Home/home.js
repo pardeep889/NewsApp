@@ -3,10 +3,16 @@ import NewsSlider from '../Widget/NewsSlider/slider'
 const Home = () => {
     return (
         <div>
-            <NewsSlider/>
+            <NewsSlider
+              type = "featured"
+              start = {0}
+              stop = {3}
+              settings = {{
+                  dots:false
+              }}
+            />
         </div>
     );
 };
 
 export default Home;
-//7th 12:00
