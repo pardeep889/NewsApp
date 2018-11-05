@@ -3,7 +3,7 @@ import axios from 'axios';
 import {URL} from '../../../../config';
 import styles from '../../articles.css';
 import Header from './header';
-import Body from './body';
+
 class  NewsArticles extends Component{
     
     state = {
@@ -37,7 +37,17 @@ class  NewsArticles extends Component{
                     date = {article.date}
                     author = {article.author}
                     />
-                    <Body/>
+                   <div className={styles.articleBody}>
+                       <h1>{article.title}</h1>
+                       <div className={styles.articleImage}
+                       style = {{
+                           background: `url('/images/articles/${article.image}')`
+                       }}>
+                       </div>
+                       <div className={styles.articleText}>
+                            {article.body}
+                       </div>
+                   </div>
             </div>
         )
     }
